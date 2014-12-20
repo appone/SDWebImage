@@ -13,6 +13,9 @@
 @implementation UIImage (ForceDecode)
 
 + (UIImage *)decodedImageWithImage:(UIImage *)image {
+    return image;
+    
+    /*
     if (image.images) {
         // Do not decode animated images
         return image;
@@ -67,6 +70,7 @@
     UIImage *decompressedImage = [UIImage imageWithCGImage:decompressedImageRef scale:image.scale orientation:image.imageOrientation];
     CGImageRelease(decompressedImageRef);
     return decompressedImage;
+    */
 }
 
 @end
